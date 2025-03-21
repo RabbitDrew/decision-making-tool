@@ -1,7 +1,5 @@
 
 class ElementCreator   {
-    private  static _element: Element | undefined
-
     public static createElement (tag:string, selectorName:string): Element | undefined{
        const element = document.createElement(tag) 
        if (element && element instanceof Element) {
