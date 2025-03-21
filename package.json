@@ -1,0 +1,57 @@
+{
+  "name": "decision-making-tool",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "format": "prettier . --write",
+    "lint": "npx eslint ./decision-making-tool/src --fix",
+    "commit": "npx commit-msg",
+    "commitlint": "npx commitlint --from HEAD~1 --to HEAD --verbose",
+    "lint-staged": "npx lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "decision-making-tool"
+  },
+  "keywords": [
+    "dmt"
+  ],
+  "author": "Andrew@rabbitDrew",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@commitlint/prompt-cli": "^19.8.0",
+    "@eslint/js": "^9.22.0",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "babel-loader": "^10.0.0",
+    "commitlint": "^19.8.0",
+    "concurrently": "^9.1.2",
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^7.1.2",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.22.0",
+    "file-loader": "^6.2.0",
+    "globals": "^16.0.0",
+    "hasky": "^3.0.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "lint-staged": "^15.5.0",
+    "prettier": "3.5.3",
+    "sass": "^1.85.1",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.1",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
+  }
+}

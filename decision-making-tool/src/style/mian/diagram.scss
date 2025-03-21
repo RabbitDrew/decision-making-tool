@@ -1,0 +1,78 @@
+@use '../common/mixins' as *;
+.main-diagram {
+  .diagram-nav__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.diagram-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  .diagram-nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    .diagram-nav-item-title {
+      @include fontStyle(28px, 600, 1px, var(--font-color));
+      transition: color 0.3s ease;
+    }
+
+    .time-input__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .time-input {
+        width: 100px;
+        background: transparent;
+        border: none;
+        @include fontStyle(28px, 600, 1px, var(--font-color));
+      }
+      .time-input::placeholder {
+        @include fontStyle(26px, 600, 1px, var(--font-color));
+      }
+      .time-input:focus {
+        outline: none;
+      }
+      .style-line {
+        width: 100%;
+        height: 3px;
+        background-color: var(--accent-color);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 2px;
+        transition: background-color 0.3s ease;
+      }
+      .time-input:focus ~ .style-line {
+        background-color: #cc582b;
+      }
+    }
+  }
+  .diagram-nav-item:hover .diagram-nav-item-title {
+    color: #cc582b;
+  }
+}
+
+.diagram-start-btn {
+  padding: 5px;
+  cursor: pointer;
+  .start-btn-title {
+    @include fontStyle(28px, 600, 1px, var(--font-color));
+    transition: color 0.3s ease;
+  }
+}
+
+.diagram-start-btn:hover .start-btn-title {
+  color: #cc582b;
+}
