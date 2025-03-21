@@ -1,16 +1,19 @@
 
-
-
 class ElementCreator   {
-    private  _parentElement: Element | undefined
-    private _chieldElement:Element | undefined
-    constructor () {
-        this._parentElement = undefined
-        this._parentElement = undefined
+    private  static _element: Element | undefined
+
+    public static createElement (tag:string, selectorName:string): Element | undefined{
+       const element = document.createElement(tag) 
+       if (element && element instanceof Element) {
+        element.className = selectorName
+        return element
+       }else {
+        return undefined
+       }
     }
 
-    public static createElement ():void {
-
+    public static renderElement (parentElement:Element, chieldElement:Element):void {
+        parentElement.append(chieldElement)
     }
 }
 
