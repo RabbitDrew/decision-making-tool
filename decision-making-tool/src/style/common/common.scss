@@ -29,7 +29,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  filter: blur(1.5px);
+  filter: blur(2px);
   position: absolute;
   top: 0;
   left: 0;
@@ -67,4 +67,11 @@ li {
 :root {
   --font-color: #3c3c3c;
   --accent-color: #46cbff;
+}
+
+// for disappearing spin btn to increas and decrease number value in  input
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

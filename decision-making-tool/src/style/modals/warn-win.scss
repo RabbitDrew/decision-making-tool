@@ -1,0 +1,51 @@
+@use '../common/mixins' as *;
+
+.modal-warn {
+  width: 380px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+
+  gap: 20px;
+
+  padding: 5px;
+
+  .warn-title__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .warn-title {
+      @include fontStyle(18px, 600, 1px, var(--font-color));
+      text-align: center;
+    }
+  }
+
+  .warn-cancel-btn {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px var(--font-color) solid;
+    border-radius: 5px;
+    transition: border 0.5s ease;
+    cursor: pointer;
+
+    .cancel-btn-title {
+      @include fontStyle(21px, 600, 1px, var(--font-color));
+      transition: color 0.5s ease;
+    }
+  }
+
+  .warn-cancel-btn:hover {
+    border-color: #cc582b;
+  }
+  .warn-cancel-btn:hover .cancel-btn-title {
+    color: #cc582b;
+  }
+}

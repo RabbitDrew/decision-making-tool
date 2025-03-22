@@ -1,23 +1,6 @@
 @use '../common/mixins' as *;
 
-.page-modal {
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  z-index: 2;
-
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.modal-csv__wrapper {
+.modal-text-area__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,11 +12,11 @@
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
 
-  .csv-textarea__wrapper {
+  .textarea__wrapper {
     max-width: 900px;
     width: 100%;
     border-bottom: 5px var(--accent-color) solid;
-    .csv-textarea {
+    .textarea {
       resize: none;
       width: 100%;
       height: 350px;
@@ -50,15 +33,15 @@
     }
   }
 
-  .csv-btns__wrapper {
+  .paste-list-btns__wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
     gap: 60px;
-    .csv-btn-cancel,
-    .csv-btn-confirm {
+    .paste-list-btn-cancel,
+    .paste-list-btn-confirm {
       max-width: 200px;
       width: 100%;
       padding: 10px;
@@ -69,19 +52,19 @@
       align-items: center;
       cursor: pointer;
       transition: border 0.3s ease;
-      .csv-btn-title {
+      .paste-list-btn-title {
         @include fontStyle(23px, 600, 1px, var(--font-color));
         transition: color 0.3s ease;
       }
     }
 
-    .csv-btn-confirm:hover,
-    .csv-btn-cancel:hover {
+    .paste-list-btn-confirm:hover,
+    .paste-list-btn-cancel:hover {
       border-color: #cc582b;
     }
 
-    .csv-btn-confirm:hover .csv-btn-title,
-    .csv-btn-cancel:hover .csv-btn-title {
+    .paste-list-btn-confirm:hover .paste-list-btn-title,
+    .paste-list-btn-cancel:hover .paste-list-btn-title {
       color: #cc582b;
     }
   }
