@@ -63,7 +63,7 @@
       }
 
       .item-input-title::placeholder {
-        @include fontStyle(18px, 600, 1px, var(--font-color));
+        @include fontStyle(18px, 600, 1px, var(--placeholder-font-color));
       }
     }
 
@@ -83,7 +83,7 @@
       }
 
       .item-input-weight::placeholder {
-        @include fontStyle(18px, 600, 1px, var(--font-color));
+        @include fontStyle(18px, 600, 1px, var(--placeholder-font-color));
       }
     }
 

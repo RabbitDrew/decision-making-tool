@@ -63,7 +63,7 @@
         @include fontStyle(28px, 600, 1px, var(--font-color));
       }
       .time-input::placeholder {
-        @include fontStyle(26px, 600, 1px, var(--font-color));
+        @include fontStyle(26px, 600, 1px, var(--placeholder-font-color));
       }
       .time-input:focus {
         outline: none;
