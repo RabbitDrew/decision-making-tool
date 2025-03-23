@@ -12,7 +12,7 @@ const optionItemCreator:OptonItemCreator = (id, title, weight) => {
     const inputTitle = ElementCreator.createElement('input', 'item-input-title')
     if (inputTitle instanceof HTMLInputElement) {
         inputTitle.type = 'text'
-        inputTitle.placeholder = 'Title'
+        inputTitle.placeholder = 'Decision title'
         inputTitle.value = title
     }
     ElementCreator.renderElement(inputTitleBlock, inputTitle)
@@ -24,7 +24,7 @@ const optionItemCreator:OptonItemCreator = (id, title, weight) => {
     const inputWeight = ElementCreator.createElement('input', 'item-input-weight')
     if (inputWeight instanceof HTMLInputElement) {
         inputWeight.type = 'number'
-        inputWeight.placeholder = 'Title'
+        inputWeight.placeholder = 'Weight'
         if (weight) {
             inputWeight.value = weight.toString()
         }else {
