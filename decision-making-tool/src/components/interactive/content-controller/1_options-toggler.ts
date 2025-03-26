@@ -3,15 +3,15 @@ import optionItemCreator from '../../layout/main-layout/2_1_option-item-creator'
 import ElementCreator from '../../global/element-creator';
 
 class AddOptionToggler {
-  public static addOptionItem(): void {
+  public static addOptionItem(title:string, weight:number|null): void {
     const optionList = getElement('.main-option-list')
     let idNum: number | undefined = this.getitemOptionId()
     if (idNum && optionList && optionList instanceof Element) {
         idNum ++
-        const optionItem = optionItemCreator(idNum, '', null)
+        const optionItem = optionItemCreator(idNum, title, weight)
         ElementCreator.renderElement(optionList, optionItem)
     }else if (!idNum && optionList && optionList instanceof Element) {
-        const optionItem = optionItemCreator(1, '', null)
+        const optionItem = optionItemCreator(1, title, weight)
         ElementCreator.renderElement(optionList, optionItem)
     }
   }

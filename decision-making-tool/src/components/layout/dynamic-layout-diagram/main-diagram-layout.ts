@@ -7,7 +7,6 @@ class Diagram extends ElementCreator {
     constructor () {
         super()
     }
-
     public static diagram ():void {
         const main = getElement('.page-main')
         const mainDiagram = this.createElement('section', 'main-diagram')
@@ -21,7 +20,6 @@ class Diagram extends ElementCreator {
             this.renderElement(main, mainDiagram)
         }
     }
-
     private static diagramNav(): Element {
         const diagramNavWrapper = this.createElement('div', 'diagram-nav__wrapper');
         const diagramNavList = this.createElement('ul', 'diagram-nav');
@@ -65,6 +63,5 @@ class Diagram extends ElementCreator {
 
 }
 
-//Diagram.diagram()
 
 export default Diagram

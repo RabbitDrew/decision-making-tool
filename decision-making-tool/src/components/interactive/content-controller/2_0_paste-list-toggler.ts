@@ -17,17 +17,18 @@ class PastLIstToggler {
     }
     // close win on cancel btn
     if (event.target instanceof HTMLElement) {
+    if (getPasteListModalWin instanceof Element) {
       const clickedTitle = event.target.closest('.paste-list-btn-title');
       const cancelBtn = clickedTitle?.closest('.paste-list-btn-cancel');
       // TODO close window on cancel btn area and title cancel btn 
-      if (cancelBtn && getPasteListModalWin instanceof Element) {
-        getPasteListModalWin.remove();
+      if (cancelBtn && 
+         (event.target === cancelBtn  || 
+         event.target.closest('.paste-list-btn-cancel .paste-list-btn-title'))) {
+           getPasteListModalWin.remove();
       }
-
-      if (getPasteListModalWin) {
-        if (event.target === getPasteListModalWin) {
+      if (event.target === getPasteListModalWin) {
           getPasteListModalWin.remove();
-        }
+      }
       }
     }
     //TODO close win on confirm btn after adding option item

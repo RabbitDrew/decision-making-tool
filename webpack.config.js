@@ -22,7 +22,7 @@ const getConfig = (argv) => {
   const runServer = () => {
     const devServ = {
       static: path.resolve(__dirname, './decision-making-tool/src'),
-      port: 2000,
+      port: 3000,
       hot: true,
     };
     return devMode === 'development' ? devServ : {};

@@ -1,7 +1,7 @@
 import ElementCreator from "../../global/element-creator"
 import type { OptonItemCreator } from "../../global/types"
 
-const optionItemCreator:OptonItemCreator = (id, title, weight) => {
+const optionItemCreator:OptonItemCreator = (id:number, title:string, weight:number|null):Element => {
     const optionItem = ElementCreator.createElement('li', 'opton-item')
     const itemId = ElementCreator.createElement('h2', 'item-id')
           itemId.textContent =`#${id}`
